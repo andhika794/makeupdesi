@@ -1,0 +1,1683 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Makeup By Desi – Artists Amazing</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Cormorant+Garamond:wght@300;400;500&family=Jost:wght@200;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --brown-dark: #3a2320;
+        --brown-mid: #5c3d35;
+        --brown-warm: #7a5248;
+        --blush: #c9a49a;
+        --blush-light: #e8d5cf;
+        --cream: #f5ede8;
+        --white: #fff8f5;
+        --gold: #c9a96e;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background-color: var(--cream);
+        font-family: "Jost", sans-serif;
+        color: var(--brown-dark);
+        overflow-x: hidden;
+      }
+
+      /* ───── NAVBAR ───── */
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 22px 56px;
+        background: transparent;
+        transition: background 0.4s;
+      }
+      nav.scrolled {
+        background: var(--brown-dark);
+      }
+
+      .nav-logo {
+        font-family: "Jost", sans-serif;
+        font-weight: 200;
+        font-size: 0.75rem;
+        letter-spacing: 0.35em;
+        text-transform: uppercase;
+        color: var(--white);
+        line-height: 1.6;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 44px;
+        list-style: none;
+      }
+      .nav-links a {
+        font-family: "Jost", sans-serif;
+        font-weight: 300;
+        font-size: 0.7rem;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--blush-light);
+        text-decoration: none;
+        position: relative;
+        padding-bottom: 3px;
+        transition: color 0.3s;
+      }
+      .nav-links a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 1px;
+        background: var(--gold);
+        transition: width 0.3s;
+      }
+      .nav-links a:hover {
+        color: var(--gold);
+      }
+      .nav-links a:hover::after {
+        width: 100%;
+      }
+
+      /* ───── HERO ───── */
+      .hero {
+        min-height: 100vh;
+        background-color: var(--brown-dark);
+        position: relative;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+      }
+
+      .geo {
+        position: absolute;
+        pointer-events: none;
+      }
+      .geo-sq1 {
+        width: 80px;
+        height: 80px;
+        border: 2px solid var(--brown-warm);
+        top: 80px;
+        left: 120px;
+        animation: floatY 6s ease-in-out infinite;
+      }
+      .geo-sq2 {
+        width: 32px;
+        height: 32px;
+        background: var(--blush);
+        top: 160px;
+        left: 230px;
+        animation: floatY 8s ease-in-out infinite reverse;
+      }
+      .geo-sq3 {
+        width: 22px;
+        height: 22px;
+        background: var(--blush-light);
+        top: 50%;
+        right: 80px;
+        animation: floatY 7s ease-in-out infinite 1s;
+      }
+      .geo-sq4 {
+        width: 60px;
+        height: 60px;
+        border: 2px solid var(--brown-warm);
+        bottom: 100px;
+        right: 160px;
+      }
+      .geo-line {
+        width: 80px;
+        height: 2px;
+        background: var(--blush);
+        bottom: 140px;
+        right: 80px;
+        animation: scaleX 4s ease-in-out infinite;
+      }
+      .geo-line2 {
+        width: 50px;
+        height: 2px;
+        background: var(--brown-warm);
+        bottom: 120px;
+        right: 80px;
+      }
+
+      @keyframes floatY {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-14px);
+        }
+      }
+      @keyframes scaleX {
+        0%,
+        100% {
+          transform: scaleX(1);
+        }
+        50% {
+          transform: scaleX(1.4);
+        }
+      }
+
+      .hero-images {
+        position: relative;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .img-bg-rect {
+        position: absolute;
+        width: 220px;
+        height: 300px;
+        background: var(--brown-mid);
+        top: 50%;
+        left: 60px;
+        transform: translateY(-50%) translateY(-30px);
+      }
+      .img-card {
+        position: absolute;
+        overflow: hidden;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        transition: transform 0.5s;
+      }
+      .img-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .img-card:hover {
+        transform: scale(1.03);
+      }
+      .img-card-1 {
+        width: 180px;
+        height: 240px;
+        top: 50%;
+        left: 50px;
+        transform: translateY(-60%);
+        animation: revealCard 0.9s 0.2s both;
+      }
+      .img-card-2 {
+        width: 160px;
+        height: 210px;
+        top: 50%;
+        left: 190px;
+        transform: translateY(-30%);
+        animation: revealCard 0.9s 0.45s both;
+      }
+
+      @keyframes revealCard {
+        from {
+          opacity: 0;
+          transform: translateY(-40%) translateX(-20px) scale(0.95);
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      .hero-copy {
+        padding: 140px 80px 80px 60px;
+        animation: fadeUp 0.9s 0.1s both;
+      }
+      @keyframes fadeUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .eyebrow {
+        font-family: "Jost", sans-serif;
+        font-weight: 300;
+        font-size: 0.7rem;
+        letter-spacing: 0.5em;
+        text-transform: uppercase;
+        color: var(--blush);
+        margin-bottom: 16px;
+      }
+      .hero-title {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(3.5rem, 7vw, 6rem);
+        font-weight: 900;
+        line-height: 0.9;
+        color: var(--white);
+        margin-bottom: 28px;
+      }
+      .hero-title em {
+        font-style: italic;
+        color: var(--blush);
+      }
+      .hero-desc {
+        font-family: "Cormorant Garamond", serif;
+        font-weight: 300;
+        font-size: 1rem;
+        line-height: 1.8;
+        color: var(--blush-light);
+        max-width: 360px;
+        margin-bottom: 44px;
+      }
+
+      .btn-primary {
+        display: inline-block;
+        font-family: "Jost", sans-serif;
+        font-weight: 400;
+        font-size: 0.68rem;
+        letter-spacing: 0.4em;
+        text-transform: uppercase;
+        color: var(--white);
+        border: 1px solid var(--blush);
+        padding: 14px 36px;
+        text-decoration: none;
+        position: relative;
+        overflow: hidden;
+        transition: color 0.4s;
+      }
+      .btn-primary::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: var(--blush);
+        transform: translateX(-101%);
+        transition: transform 0.4s;
+      }
+      .btn-primary:hover {
+        color: var(--brown-dark);
+      }
+      .btn-primary:hover::before {
+        transform: translateX(0);
+      }
+      .btn-primary span {
+        position: relative;
+        z-index: 1;
+      }
+
+      .hero-social {
+        position: absolute;
+        bottom: 50px;
+        right: 56px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+      }
+      .hero-social .handle {
+        font-size: 0.62rem;
+        letter-spacing: 0.3em;
+        color: var(--blush);
+        text-transform: uppercase;
+      }
+      .social-icons {
+        display: flex;
+        gap: 14px;
+      }
+      .social-icons a {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        border: 1px solid var(--brown-warm);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--blush-light);
+        text-decoration: none;
+        font-size: 0.7rem;
+        transition:
+          border-color 0.3s,
+          color 0.3s;
+      }
+      .social-icons a:hover {
+        border-color: var(--gold);
+        color: var(--gold);
+      }
+
+      /* ───── SERVICES / PRICE LIST ───── */
+      .section-services {
+        background: var(--cream);
+        padding: 100px 80px;
+      }
+      .section-label {
+        font-size: 0.65rem;
+        letter-spacing: 0.5em;
+        text-transform: uppercase;
+        color: var(--blush);
+        margin-bottom: 12px;
+      }
+      .section-title {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(2rem, 4vw, 3.2rem);
+        font-weight: 700;
+        color: var(--brown-dark);
+        margin-bottom: 64px;
+      }
+
+      .price-hero {
+        background: linear-gradient(
+          135deg,
+          var(--brown-dark) 0%,
+          var(--brown-mid) 100%
+        );
+        padding: 52px 60px;
+        margin-bottom: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        overflow: hidden;
+      }
+      .price-hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          120deg,
+          transparent 50%,
+          rgba(201, 164, 154, 0.08) 100%
+        );
+      }
+      .price-hero-text {
+        position: relative;
+        z-index: 1;
+      }
+      .price-hero-eyebrow {
+        font-size: 0.6rem;
+        letter-spacing: 0.5em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 8px;
+      }
+      .price-hero-title {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(2.8rem, 6vw, 5rem);
+        font-weight: 900;
+        line-height: 0.95;
+        color: var(--white);
+      }
+      .price-hero-title span {
+        display: block;
+        font-size: clamp(1rem, 2vw, 1.4rem);
+        font-weight: 400;
+        color: var(--blush);
+        letter-spacing: 0.25em;
+        margin-top: 6px;
+      }
+      .price-hero-note {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 0.9rem;
+        color: var(--blush-light);
+        margin-top: 14px;
+        font-style: italic;
+      }
+
+      .price-list {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+      .price-card {
+        background: var(--white);
+        border: 1px solid var(--blush-light);
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        overflow: hidden;
+        transition:
+          box-shadow 0.3s,
+          transform 0.3s;
+      }
+      .price-card:hover {
+        box-shadow: 0 12px 40px rgba(58, 35, 32, 0.12);
+        transform: translateY(-2px);
+      }
+
+      .price-card-thumb {
+        background: linear-gradient(
+          135deg,
+          var(--brown-dark),
+          var(--brown-mid)
+        );
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        padding: 20px 22px;
+        min-height: 140px;
+      }
+      .price-card-thumb::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          to bottom right,
+          transparent 40%,
+          rgba(201, 169, 110, 0.15)
+        );
+      }
+      .price-card-thumb .thumb-tag {
+        position: relative;
+        z-index: 1;
+        font-size: 0.5rem;
+        letter-spacing: 0.4em;
+        text-transform: uppercase;
+        color: var(--gold);
+        margin-bottom: 4px;
+      }
+      .price-card-thumb .thumb-name {
+        position: relative;
+        z-index: 1;
+        font-family: "Playfair Display", serif;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--white);
+        line-height: 1;
+      }
+      .price-card-thumb .thumb-sub {
+        position: relative;
+        z-index: 1;
+        font-size: 0.55rem;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--blush);
+        margin-top: 4px;
+      }
+      .price-card-thumb::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 2px;
+        height: 100%;
+        background: linear-gradient(
+          to bottom,
+          transparent,
+          var(--gold),
+          transparent
+        );
+      }
+
+      .price-card-body {
+        padding: 24px 36px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .price-card-name {
+        font-family: "Playfair Display", serif;
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: var(--brown-dark);
+        margin-bottom: 14px;
+      }
+      .price-rows {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .price-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px dashed var(--blush-light);
+        padding-bottom: 8px;
+      }
+      .price-row:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+      .price-row-label {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 0.95rem;
+        color: var(--brown-warm);
+      }
+      .price-row-val {
+        font-family: "Playfair Display", serif;
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: var(--brown-dark);
+      }
+      .price-footer-note {
+        text-align: center;
+        margin-top: 20px;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 0.9rem;
+        font-style: italic;
+        color: var(--brown-warm);
+      }
+
+      /* ───── ABOUT ───── */
+      .about-strip {
+        background: var(--brown-mid);
+        padding: 80px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: center;
+      }
+      .about-strip .section-title {
+        color: var(--white);
+        margin-bottom: 20px;
+      }
+      .about-strip p {
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1.05rem;
+        line-height: 1.9;
+        color: var(--blush-light);
+      }
+      .about-stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+      }
+      .stat-num {
+        font-family: "Playfair Display", serif;
+        font-size: 3.5rem;
+        font-weight: 900;
+        color: var(--blush);
+        line-height: 1;
+      }
+      .stat-label {
+        font-size: 0.7rem;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--blush-light);
+        margin-top: 8px;
+      }
+
+      /* ───── GALLERY ───── */
+      .gallery-section {
+        padding: 120px 0 120px;
+        background: var(--white);
+      }
+      .gallery-header {
+        padding: 0 80px;
+        margin-bottom: 60px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+      }
+      .slideshow-wrap {
+        position: relative;
+        overflow: hidden;
+      }
+      .slides-track {
+        display: flex;
+        transition: transform 0.7s cubic-bezier(0.77, 0, 0.175, 1);
+      }
+      .slide {
+        min-width: 33.333%;
+        padding: 0 6px;
+        flex-shrink: 0;
+      }
+      @media (max-width: 900px) {
+        .slide {
+          min-width: 80%;
+        }
+      }
+      .slide-inner {
+        position: relative;
+        overflow: hidden;
+        aspect-ratio: 4/5;
+        max-height: 320px;
+        background: var(--blush-light);
+      }
+      .slide-inner img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.6s ease;
+      }
+      .slide-inner:hover img {
+        transform: scale(1.06);
+      }
+      .slide-label {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 40px 24px 20px;
+        background: linear-gradient(
+          to top,
+          rgba(58, 35, 32, 0.85),
+          transparent
+        );
+        font-size: 0.65rem;
+        letter-spacing: 0.35em;
+        text-transform: uppercase;
+        color: var(--blush-light);
+      }
+      .slide-arrows {
+        display: flex;
+        gap: 12px;
+      }
+      .slide-btn {
+        width: 44px;
+        height: 44px;
+        border: 1px solid var(--blush);
+        background: transparent;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--brown-dark);
+        font-size: 1rem;
+        transition:
+          background 0.3s,
+          color 0.3s;
+      }
+      .slide-btn:hover {
+        background: var(--brown-dark);
+        color: var(--blush-light);
+      }
+      .slide-dots {
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        margin-top: 36px;
+      }
+      .dot {
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background: var(--blush-light);
+        cursor: pointer;
+        transition:
+          background 0.3s,
+          transform 0.3s;
+      }
+      .dot.active {
+        background: var(--brown-dark);
+        transform: scale(1.4);
+      }
+
+      /* ───── CONTACT ───── */
+      .contact-section {
+        background: var(--cream);
+        padding: 120px 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .contact-section .section-label {
+        text-align: center;
+        font-size: 0.75rem;
+        letter-spacing: 0.6em;
+      }
+      .contact-section .section-title {
+        text-align: center;
+        margin-bottom: 60px;
+        font-size: clamp(3rem, 6vw, 5rem);
+      }
+      .booking-card {
+        width: 100%;
+        max-width: 680px;
+        background: var(--brown-dark);
+        padding: 64px 72px;
+        position: relative;
+      }
+      .booking-card::before {
+        content: "";
+        position: absolute;
+        top: -6px;
+        left: -6px;
+        right: 6px;
+        bottom: 6px;
+        border: 1px solid var(--blush);
+        pointer-events: none;
+      }
+      .form-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+      }
+      .form-group {
+        margin-bottom: 28px;
+      }
+      .form-group label {
+        display: block;
+        font-size: 0.6rem;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        color: var(--blush);
+        margin-bottom: 10px;
+      }
+      .form-group input,
+      .form-group textarea,
+      .form-group select {
+        width: 100%;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid var(--brown-warm);
+        padding: 10px 0;
+        font-family: "Cormorant Garamond", serif;
+        font-size: 1rem;
+        color: var(--white);
+        outline: none;
+        transition: border-color 0.3s;
+        -webkit-appearance: none;
+      }
+      .form-group select option {
+        background: var(--brown-dark);
+        color: var(--white);
+      }
+      .form-group input::placeholder,
+      .form-group textarea::placeholder {
+        color: var(--brown-warm);
+      }
+      .form-group input:focus,
+      .form-group textarea:focus,
+      .form-group select:focus {
+        border-color: var(--gold);
+      }
+      .form-group textarea {
+        resize: none;
+        height: 90px;
+      }
+
+      .form-submit {
+        width: 100%;
+        margin-top: 8px;
+        padding: 16px;
+        background: transparent;
+        border: 1px solid var(--blush);
+        font-family: "Jost", sans-serif;
+        font-size: 0.68rem;
+        letter-spacing: 0.4em;
+        text-transform: uppercase;
+        color: var(--white);
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+        transition: color 0.4s;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+      .form-submit::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: #25d366;
+        transform: translateX(-101%);
+        transition: transform 0.4s;
+      }
+      .form-submit:hover {
+        color: var(--white);
+        border-color: #25d366;
+      }
+      .form-submit:hover::before {
+        transform: translateX(0);
+      }
+      .form-submit span {
+        position: relative;
+        z-index: 1;
+      }
+      .form-submit .wa-icon {
+        position: relative;
+        z-index: 1;
+        font-size: 1rem;
+      }
+      .form-submit:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+      }
+
+      /* Toast notif */
+      .toast {
+        position: fixed;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%) translateY(80px);
+        background: var(--brown-dark);
+        color: var(--white);
+        border: 1px solid var(--gold);
+        padding: 14px 32px;
+        font-size: 0.75rem;
+        letter-spacing: 0.2em;
+        z-index: 999;
+        opacity: 0;
+        transition:
+          transform 0.4s,
+          opacity 0.4s;
+        pointer-events: none;
+      }
+      .toast.show {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+      }
+      .toast.error {
+        border-color: #c94a4a;
+      }
+
+      /* ───── FOOTER ───── */
+      footer {
+        background: #261514;
+        padding: 36px 80px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      footer .logo-foot {
+        font-weight: 200;
+        font-size: 0.7rem;
+        letter-spacing: 0.4em;
+        text-transform: uppercase;
+        color: var(--blush);
+      }
+      footer p {
+        font-size: 0.6rem;
+        color: var(--brown-warm);
+        letter-spacing: 0.15em;
+      }
+
+      /* ═══════════════════════════════
+       MOBILE  ≤ 600px
+    ═══════════════════════════════ */
+      @media (max-width: 600px) {
+        nav {
+          padding: 16px 20px;
+          background: var(--brown-dark);
+        }
+        .nav-links {
+          display: none;
+        }
+
+        .hero {
+          grid-template-columns: 1fr;
+          grid-template-rows: auto auto;
+          min-height: auto;
+          padding-bottom: 60px;
+        }
+        .hero-images {
+          display: none;
+        }
+        .hero-copy {
+          padding: 100px 24px 40px;
+          text-align: center;
+        }
+        .hero-title {
+          font-size: 3rem;
+          line-height: 1;
+        }
+        .hero-desc {
+          max-width: 100%;
+          font-size: 0.95rem;
+          margin-bottom: 32px;
+        }
+        .btn-primary {
+          padding: 14px 28px;
+        }
+        .geo {
+          display: none;
+        }
+        .hero-social {
+          position: static;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          margin-top: 32px;
+          gap: 16px;
+        }
+
+        .section-services {
+          padding: 64px 16px;
+        }
+        .section-title {
+          font-size: 1.8rem;
+          margin-bottom: 32px;
+        }
+        .price-hero {
+          padding: 28px 20px;
+          margin-bottom: 24px;
+        }
+        .price-hero-title {
+          font-size: 2.4rem;
+        }
+        .price-card {
+          grid-template-columns: 1fr;
+        }
+        .price-card-thumb {
+          min-height: 80px;
+          flex-direction: row;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 12px;
+          padding: 16px 20px;
+        }
+        .price-card-thumb::after {
+          display: none;
+        }
+        .price-card-thumb .thumb-name {
+          font-size: 1.2rem;
+        }
+        .price-card-body {
+          padding: 16px 20px;
+        }
+        .price-card-name {
+          font-size: 1rem;
+          margin-bottom: 10px;
+        }
+        .price-row-label {
+          font-size: 0.88rem;
+        }
+        .price-row-val {
+          font-size: 0.88rem;
+        }
+
+        .about-strip {
+          grid-template-columns: 1fr;
+          padding: 56px 20px;
+          gap: 40px;
+        }
+        .about-stats {
+          grid-template-columns: 1fr 1fr;
+          gap: 28px;
+        }
+        .stat-num {
+          font-size: 2.4rem;
+        }
+
+        .gallery-section {
+          padding: 64px 0;
+        }
+        .gallery-header {
+          padding: 0 20px;
+          flex-wrap: wrap;
+          gap: 16px;
+          margin-bottom: 32px;
+        }
+        .slide {
+          min-width: 85%;
+          padding: 0 8px;
+        }
+        .slide-inner {
+          max-height: 260px;
+        }
+
+        .contact-section {
+          padding: 64px 16px;
+        }
+        .contact-section .section-title {
+          font-size: 2.2rem;
+          margin-bottom: 36px;
+        }
+        .booking-card {
+          padding: 36px 20px;
+        }
+        .booking-card::before {
+          display: none;
+        }
+        .form-row {
+          grid-template-columns: 1fr;
+          gap: 0;
+        }
+        .form-group {
+          margin-bottom: 22px;
+        }
+        .form-submit {
+          letter-spacing: 0.2em;
+          font-size: 0.7rem;
+        }
+
+        footer {
+          flex-direction: column;
+          gap: 10px;
+          padding: 28px 20px;
+          text-align: center;
+        }
+
+        .toast {
+          width: 88%;
+          font-size: 0.7rem;
+          padding: 12px 16px;
+          text-align: center;
+        }
+      }
+
+      /* ═══════════════════════════════
+       TABLET  601px – 900px
+    ═══════════════════════════════ */
+      @media (min-width: 601px) and (max-width: 900px) {
+        nav {
+          padding: 18px 28px;
+          background: var(--brown-dark);
+        }
+        .nav-links {
+          display: none;
+        }
+
+        .hero {
+          grid-template-columns: 1fr;
+        }
+        .hero-images {
+          height: 45vh;
+        }
+        .hero-copy {
+          padding: 40px 40px 80px;
+        }
+        .geo {
+          display: none;
+        }
+        .hero-social {
+          bottom: 20px;
+          right: 28px;
+        }
+
+        .section-services {
+          padding: 80px 32px;
+        }
+        .price-hero {
+          padding: 40px 36px;
+        }
+        .price-card {
+          grid-template-columns: 160px 1fr;
+        }
+        .price-card-body {
+          padding: 20px 24px;
+        }
+
+        .about-strip {
+          grid-template-columns: 1fr;
+          padding: 64px 32px;
+          gap: 48px;
+        }
+
+        .gallery-header {
+          padding: 0 32px;
+          flex-wrap: wrap;
+          gap: 20px;
+        }
+        .slide {
+          min-width: 75%;
+        }
+        .slide-inner {
+          max-height: 300px;
+        }
+
+        .contact-section {
+          padding: 80px 24px;
+        }
+        .booking-card {
+          padding: 48px 36px;
+        }
+        .form-row {
+          grid-template-columns: 1fr;
+          gap: 0;
+        }
+
+        footer {
+          flex-direction: column;
+          gap: 12px;
+          padding: 28px 32px;
+          text-align: center;
+        }
+      }
+
+      /* ── Hamburger button ── */
+      .nav-burger {
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        gap: 5px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 4px;
+        z-index: 200;
+      }
+      .nav-burger span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: var(--blush-light);
+        transition:
+          transform 0.3s,
+          opacity 0.3s;
+      }
+
+      /* ── Mobile full-screen menu ── */
+      .mobile-menu {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 150;
+        background: var(--brown-dark);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 36px;
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      .mobile-menu.open {
+        display: flex;
+        opacity: 1;
+      }
+      .mobile-menu ul {
+        list-style: none;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+      }
+      .mobile-menu ul li a {
+        font-family: "Playfair Display", serif;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--white);
+        text-decoration: none;
+        letter-spacing: 0.05em;
+        transition: color 0.3s;
+      }
+      .mobile-menu ul li a:hover {
+        color: var(--blush);
+      }
+      .mobile-close {
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1.4rem;
+        color: var(--blush);
+      }
+
+      @media (max-width: 900px) {
+        .nav-burger {
+          display: flex;
+        }
+        .nav-links {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Mobile overlay menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="mobile-close" id="mobileClose">✕</button>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#services">Layanan</a></li>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#gallery">Galeri</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+    </div>
+
+    <!-- NAVBAR -->
+    <nav id="navbar">
+      <div class="nav-logo">Makeup<br />By Desi</div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#services">Layanan</a></li>
+        <li><a href="#about">Tentang</a></li>
+        <li><a href="#gallery">Galeri</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+      <button class="nav-burger" id="navBurger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="geo geo-sq1"></div>
+      <div class="geo geo-sq2"></div>
+      <div class="geo geo-sq3"></div>
+      <div class="geo geo-sq4"></div>
+      <div class="geo geo-line"></div>
+      <div class="geo geo-line2"></div>
+
+      <div class="hero-images">
+        <div class="img-bg-rect"></div>
+        <div class="img-card img-card-1">
+          <img src="img/foto 1.jpg" alt="Makeup Artist 1" />
+        </div>
+        <div class="img-card img-card-2">
+          <img src="img/foto 2.jpg" alt="Makeup Artist 2" />
+        </div>
+      </div>
+
+      <div class="hero-copy">
+        <p class="eyebrow">Makeup</p>
+        <h1 class="hero-title">Artists<br /><em>Amazing</em></h1>
+        <p class="hero-desc">
+          Kami menghadirkan keindahan terbaik untuk setiap momen spesial Anda.
+          Dipercaya oleh ribuan klien dengan sentuhan profesional dan hasil
+          memukau.
+        </p>
+        <a href="#contact" class="btn-primary"><span>Booking Sekarang</span></a>
+      </div>
+
+      <div class="hero-social">
+        <span class="handle">@makeupbydesi</span>
+        <div class="social-icons">
+          <a href="#" title="Instagram">✦</a>
+          <a href="#" title="TikTok">▶</a>
+          <a href="#" title="YouTube">○</a>
+          <a href="#" title="Facebook">f</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES / PRICE LIST -->
+    <section class="section-services" id="services">
+      <p class="section-label">Layanan Kami</p>
+      <h2 class="section-title">Apa yang Kami Tawarkan</h2>
+
+      <div class="price-list">
+        <!-- Graduation -->
+        <div class="price-card">
+          <div class="price-card-thumb">
+            <span class="thumb-tag">Deluxe</span>
+            <span class="thumb-name">Graduation</span>
+            <span class="thumb-sub">Make Up</span>
+          </div>
+          <div class="price-card-body">
+            <div class="price-card-name">Graduation Makeup</div>
+            <div class="price-rows">
+              <div class="price-row">
+                <span class="price-row-label">Makeup Only</span>
+                <span class="price-row-val">Rp 200.000</span>
+              </div>
+              <div class="price-row">
+                <span class="price-row-label">+ include bulumata</span>
+              </div>
+              <div class="price-row">
+                <span class="price-row-label">+ jasa hijab do</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Party -->
+        <div class="price-card">
+          <div class="price-card-thumb">
+            <span class="thumb-tag">deluxe</span>
+            <span class="thumb-name">engagement makeup</span>
+            <span class="thumb-sub">Make Up</span>
+          </div>
+          <div class="price-card-body">
+            <div class="price-card-name">Engagement Makeup</div>
+            <div class="price-rows">
+              <div class="price-row">
+                <span class="price-row-label">Makeup Only</span>
+                <span class="price-row-val">Rp 300.000</span>
+              </div>
+              <div class="price-row">
+                <span class="price-row-label">+ include bulumata</span>
+              </div>
+              <div class="price-row">
+                <span class="price-row-label">+ include jasa hijab do</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Daily -->
+        <div class="price-card">
+          <div class="price-card-thumb">
+            <span class="thumb-tag">Deluxe</span>
+            <span class="thumb-name">additional</span>
+            <span class="thumb-sub">Make Up</span>
+          </div>
+          <div class="price-card-body">
+            <div class="price-card-name">Additional</div>
+            <div class="price-rows">
+              <div class="price-row">
+                <span class="price-row-label">+ soflen</span>
+                <span class="price-row-val">Rp 50.000</span>
+              </div>
+              <div class="price-row">
+                <span class="price-row-label"
+                  >+ home service (menyesuaikan lokasi dan jarak)</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="price-footer-note">* fee menyesuaikan lokasi dan jarak</p>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about-strip" id="about">
+      <div>
+        <p class="section-label">Tentang Kami</p>
+        <h2 class="section-title">Kecantikan adalah Seni</h2>
+        <p>
+          Kami adalah studio makeup profesional dengan pengalaman lebih dari 3
+          tahun melayani berbagai kebutuhan riasan. Setiap klien adalah kanvas
+          unik yang kami hadirkan keindahan terbaiknya dengan produk premium
+          pilihan.
+        </p>
+      </div>
+      <div class="about-stats">
+        <div>
+          <div class="stat-num">500+</div>
+          <div class="stat-label">Klien Puas</div>
+        </div>
+        <div>
+          <div class="stat-num">8+</div>
+          <div class="stat-label">Tahun Pengalaman</div>
+        </div>
+        <div>
+          <div class="stat-num">12</div>
+          <div class="stat-label">Makeup Artist</div>
+        </div>
+        <div>
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Klien Bahagia</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="gallery-section" id="gallery">
+      <div class="gallery-header">
+        <div>
+          <p class="section-label">Portofolio</p>
+          <h2 class="section-title" style="margin-bottom: 0">
+            Hasil Karya Kami
+          </h2>
+        </div>
+        <div class="slide-arrows">
+          <button class="slide-btn" id="prevBtn">&#8592;</button>
+          <button class="slide-btn" id="nextBtn">&#8594;</button>
+        </div>
+      </div>
+
+      <div class="slideshow-wrap">
+        <div class="slides-track" id="slidesTrack">
+          <div class="slide">
+            <div class="slide-inner">
+              <img src="img/wisuda1.jpg" alt="Pengantin" />
+              <div class="slide-label">Pengantin</div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-inner">
+              <img src="img/foto 1.jpg" alt="Wisuda" />
+              <div class="slide-label">Wisuda</div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-inner">
+              <img src="img/wisuda3.jpg" alt="Editorial" />
+              <div class="slide-label">Editorial</div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-inner">
+              <img src="img/wisuda1.jpg" alt="Pesta" />
+              <div class="slide-label">Pesta</div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-inner">
+              <img src="img/wisuda 2.jpg" alt="Prewedding" />
+              <div class="slide-label">Prewedding</div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-inner">
+              <img src="img/wisuda3.jpg" alt="Natural" />
+              <div class="slide-label">Natural Glam</div>
+            </div>
+          </div>
+          <div class="slide">
+            <div class="slide-inner">
+              <img src="img/foto 2.jpg" alt="Beauty" />
+              <div class="slide-label">Beauty Shoot</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide-dots" id="slideDots"></div>
+    </section>
+
+    <!-- BOOKING FORM -->
+    <section class="contact-section" id="contact">
+      <p class="section-label">Reservasi</p>
+      <h2 class="section-title">Booking Sekarang</h2>
+
+      <div class="booking-card">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Nama Lengkap</label>
+            <input type="text" id="inputNama" placeholder="Nama Anda" />
+          </div>
+          <div class="form-group">
+            <label>Nomor WhatsApp</label>
+            <input type="tel" id="inputWa" placeholder="+62" />
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Jenis Layanan</label>
+            <select id="inputLayanan">
+              <option value="" disabled selected>Pilih layanan</option>
+              <option>Makeup Pengantin</option>
+              <option>Makeup Wisuda</option>
+              <option>Makeup Pesta</option>
+              <option>Makeup Editorial</option>
+              <option>Prewedding</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Tanggal Acara</label>
+            <input type="date" id="inputTanggal" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Lokasi Acara</label>
+          <input type="text" id="inputLokasi" placeholder="Kota / Venue" />
+        </div>
+        <div class="form-group">
+          <label>Catatan Tambahan</label>
+          <textarea
+            id="inputCatatan"
+            placeholder="Ceritakan konsep atau keinginan Anda..."
+          ></textarea>
+        </div>
+        <button class="form-submit" id="btnSubmit">
+          <span>booking sekarang!</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="logo-foot">Makeup By Desi</div>
+      <p>© 2026 Makeup By Desi. All rights reserved.</p>
+    </footer>
+
+    <script>
+      // ── Navbar scroll ──
+      const nav = document.getElementById("navbar");
+      window.addEventListener("scroll", () => {
+        nav.classList.toggle("scrolled", window.scrollY > 60);
+      });
+
+      // ── Scroll reveal ──
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.style.opacity = "1";
+              e.target.style.transform = "translateY(0)";
+            }
+          });
+        },
+        { threshold: 0.15 },
+      );
+
+      document
+        .querySelectorAll(".service-card, .stat-num, .booking-card")
+        .forEach((el) => {
+          el.style.cssText +=
+            "opacity:0;transform:translateY(30px);transition:opacity .7s,transform .7s;";
+          observer.observe(el);
+        });
+
+      // ── Toast helper ──
+      function showToast(msg, isError = false) {
+        const t = document.getElementById("toast");
+        t.textContent = msg;
+        t.className = "toast" + (isError ? " error" : "");
+        setTimeout(() => t.classList.add("show"), 10);
+        setTimeout(() => t.classList.remove("show"), 3500);
+      }
+
+      // ── Slideshow ──
+      const track = document.getElementById("slidesTrack");
+      const slides = document.querySelectorAll(".slide");
+      const dotsWrap = document.getElementById("slideDots");
+      const prevBtn = document.getElementById("prevBtn");
+      const nextBtn = document.getElementById("nextBtn");
+
+      let perView = window.innerWidth <= 900 ? 1 : 3;
+      let current = 0;
+      const total = slides.length;
+
+      for (let i = 0; i < total; i++) {
+        const d = document.createElement("div");
+        d.className = "dot" + (i === 0 ? " active" : "");
+        d.addEventListener("click", () => goTo(i));
+        dotsWrap.appendChild(d);
+      }
+
+      function goTo(idx) {
+        current = (idx + total) % total;
+        track.style.transform = `translateX(-${current * (100 / perView)}%)`;
+        document
+          .querySelectorAll(".dot")
+          .forEach((d, i) => d.classList.toggle("active", i === current));
+      }
+
+      prevBtn.addEventListener("click", () => goTo(current - 1));
+      nextBtn.addEventListener("click", () => goTo(current + 1));
+
+      let timer = setInterval(() => goTo(current + 1), 4000);
+      [prevBtn, nextBtn].forEach((b) =>
+        b.addEventListener("click", () => {
+          clearInterval(timer);
+          timer = setInterval(() => goTo(current + 1), 4000);
+        }),
+      );
+
+      let startX = 0;
+      track.addEventListener(
+        "touchstart",
+        (e) => (startX = e.touches[0].clientX),
+      );
+      track.addEventListener("touchend", (e) => {
+        const diff = startX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) goTo(diff > 0 ? current + 1 : current - 1);
+      });
+
+      window.addEventListener("resize", () => {
+        perView = window.innerWidth <= 900 ? 1 : 3;
+        goTo(current);
+      });
+
+      // ── Hamburger menu ──
+      const burger = document.getElementById("navBurger");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const mobileClose = document.getElementById("mobileClose");
+
+      function openMenu() {
+        mobileMenu.classList.add("open");
+        document.body.style.overflow = "hidden";
+      }
+      function closeMenu() {
+        mobileMenu.classList.remove("open");
+        document.body.style.overflow = "";
+      }
+
+      burger.addEventListener("click", openMenu);
+      mobileClose.addEventListener("click", closeMenu);
+      mobileMenu
+        .querySelectorAll("a")
+        .forEach((a) => a.addEventListener("click", closeMenu));
+
+      // ── WhatsApp Booking ──
+      const WA_NUMBER = "62882005843047"; // nomor tujuan
+
+      document.getElementById("btnSubmit").addEventListener("click", () => {
+        const nama = document.getElementById("inputNama").value.trim();
+        const wa = document.getElementById("inputWa").value.trim();
+        const layanan = document.getElementById("inputLayanan").value;
+        const tanggal = document.getElementById("inputTanggal").value;
+        const lokasi = document.getElementById("inputLokasi").value.trim();
+        const catatan = document.getElementById("inputCatatan").value.trim();
+
+        // Validasi
+        if (!nama || !wa || !layanan || !tanggal || !lokasi) {
+          showToast("Mohon lengkapi semua field yang wajib diisi.", true);
+          return;
+        }
+
+        // Format tanggal agar lebih mudah dibaca
+        const tgl = new Date(tanggal);
+        const tglStr = tgl.toLocaleDateString("id-ID", {
+          weekday: "long",
+          year: "numeric",
+          month: "long",
+          day: "numeric",
+        });
+
+        // Susun pesan WhatsApp
+        const pesan =
+          `Halo Kak Desi! Saya ingin melakukan booking makeup 💄\n\n` +
+          `👤 *Nama*: ${nama}\n` +
+          `📱 *No. WhatsApp*: ${wa}\n` +
+          `💅 *Layanan*: ${layanan}\n` +
+          `📅 *Tanggal Acara*: ${tglStr}\n` +
+          `📍 *Lokasi*: ${lokasi}\n` +
+          (catatan ? `📝 *Catatan*: ${catatan}\n` : ``) +
+          `\nMohon konfirmasinya ya Kak, terima kasih! 🙏`;
+
+        const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(pesan)}`;
+        window.open(url, "_blank");
+
+        showToast("✓ Mengalihkan ke WhatsApp...");
+      });
+    </script>
+  </body>
+</html>
