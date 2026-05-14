@@ -827,13 +827,13 @@
         content: "";
         position: absolute;
         inset: 0;
-        background: #25d366;
+        background: var(--blush);
         transform: translateX(-101%);
         transition: transform 0.4s;
       }
       .form-submit:hover {
-        color: var(--white);
-        border-color: #25d366;
+        color: var(--brown-dark);
+        border-color: var(--blush);
       }
       .form-submit:hover::before {
         transform: translateX(0);
@@ -1167,52 +1167,73 @@
 
       /* ── Mobile full-screen menu ── */
       .mobile-menu {
-        display: none;
         position: fixed;
         inset: 0;
-        z-index: 150;
-        background: var(--brown-dark);
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        gap: 36px;
-        opacity: 0;
-        transition: opacity 0.3s;
-      }
-      .mobile-menu.open {
+        width: 100%;
+        height: 100vh;
+        background: rgba(58, 35, 32, 0.96);
+
         display: flex;
-        opacity: 1;
+        justify-content: center;
+        align-items: center;
+
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.4s;
+        z-index: 9999;
       }
+
+      .mobile-menu.open {
+        opacity: 1;
+        visibility: visible;
+      }
+
       .mobile-menu ul {
         list-style: none;
-        text-align: center;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        max-width: 300px;
+
         display: flex;
         flex-direction: column;
         gap: 28px;
+
+        text-align: left;
       }
+      .mobile-menu ul li {
+        width: 100%;
+      }
+
+      .mobile-menu ul li a {
+        display: block;
+        width: 100%;
+      }
+
       .mobile-menu ul li a {
         font-family: "Playfair Display", serif;
-        font-size: 1.8rem;
+        font-size: 2rem;
         font-weight: 700;
         color: var(--white);
         text-decoration: none;
-        letter-spacing: 0.05em;
-        transition: color 0.3s;
-      }
-      .mobile-menu ul li a:hover {
-        color: var(--blush);
-      }
-      .mobile-close {
-        position: absolute;
-        top: 24px;
-        right: 24px;
-        background: none;
-        border: none;
-        cursor: pointer;
-        font-size: 1.4rem;
-        color: var(--blush);
+        letter-spacing: 0.08em;
+        transition: 0.3s;
       }
 
+      .mobile-menu ul li a:hover {
+        color: var(--gold);
+      }
+
+      .mobile-close {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        background: none;
+        border: none;
+        color: var(--white);
+        font-size: 32px;
+        cursor: pointer;
+      }
       @media (max-width: 900px) {
         .nav-burger {
           display: flex;
@@ -1235,7 +1256,7 @@
         <li><a href="#services">Layanan</a></li>
         <li><a href="#about">Tentang</a></li>
         <li><a href="#gallery">Galeri</a></li>
-        <li><a href="#contact">Kontak</a></li>
+        <li><a href="#contact">reservasi</a></li>
       </ul>
     </div>
 
@@ -1247,7 +1268,7 @@
         <li><a href="#services">Layanan</a></li>
         <li><a href="#about">Tentang</a></li>
         <li><a href="#gallery">Galeri</a></li>
-        <li><a href="#contact">Kontak</a></li>
+        <li><a href="#contact">reservasi</a></li>
       </ul>
       <button class="nav-burger" id="navBurger" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -1266,10 +1287,10 @@
       <div class="hero-images">
         <div class="img-bg-rect"></div>
         <div class="img-card img-card-1">
-          <img src="img/foto 1.jpg" alt="Makeup Artist 1" />
+          <img src="img/fotobg.jpeg" alt="Makeup Artist 1" />
         </div>
         <div class="img-card img-card-2">
-          <img src="img/foto 2.jpg" alt="Makeup Artist 2" />
+          <img src="img/fotobg2.jpeg" alt="Makeup Artist 2" />
         </div>
       </div>
 
@@ -1304,9 +1325,7 @@
         <!-- Graduation -->
         <div class="price-card">
           <div class="price-card-thumb">
-            <span class="thumb-tag">Deluxe</span>
-            <span class="thumb-name">Graduation</span>
-            <span class="thumb-sub">Make Up</span>
+            <span class="thumb-name">Graduation makeup</span>
           </div>
           <div class="price-card-body">
             <div class="price-card-name">Graduation Makeup</div>
@@ -1328,9 +1347,7 @@
         <!-- Party -->
         <div class="price-card">
           <div class="price-card-thumb">
-            <span class="thumb-tag">deluxe</span>
             <span class="thumb-name">engagement makeup</span>
-            <span class="thumb-sub">Make Up</span>
           </div>
           <div class="price-card-body">
             <div class="price-card-name">Engagement Makeup</div>
@@ -1349,18 +1366,38 @@
           </div>
         </div>
 
+        <!-- Party -->
+        <div class="price-card">
+          <div class="price-card-thumb">
+            <span class="thumb-name">yearbook makeup</span>
+          </div>
+          <div class="price-card-body">
+            <div class="price-card-name">Yearbook Makeup</div>
+            <div class="price-rows">
+              <div class="price-row">
+                <span class="price-row-label">Makeup Only</span>
+                <span class="price-row-val">Rp 150.000</span>
+              </div>
+              <div class="price-row">
+                <span class="price-row-label">+ include bulumata</span>
+              </div>
+              <div class="price-row">
+                <span class="price-row-label">+ include jasa hijab do</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <!-- Daily -->
         <div class="price-card">
           <div class="price-card-thumb">
-            <span class="thumb-tag">Deluxe</span>
             <span class="thumb-name">additional</span>
-            <span class="thumb-sub">Make Up</span>
           </div>
           <div class="price-card-body">
             <div class="price-card-name">Additional</div>
             <div class="price-rows">
               <div class="price-row">
-                <span class="price-row-label">+ soflen</span>
+                <span class="price-row-label">+ softlens</span>
                 <span class="price-row-val">Rp 50.000</span>
               </div>
               <div class="price-row">
@@ -1372,7 +1409,7 @@
           </div>
         </div>
       </div>
-      <p class="price-footer-note">* fee menyesuaikan lokasi dan jarak</p>
+      <p class="price-footer-note">* harga yang di atas adalah harga tetap</p>
     </section>
 
     <!-- ABOUT -->
@@ -1432,7 +1469,7 @@
           </div>
           <div class="slide">
             <div class="slide-inner">
-              <img src="img/foto 1.jpg" alt="Wisuda" />
+              <img src="img/fotobg2.jpeg" alt="Wisuda" />
               <div class="slide-label">Wisuda</div>
             </div>
           </div>
@@ -1462,7 +1499,7 @@
           </div>
           <div class="slide">
             <div class="slide-inner">
-              <img src="img/foto 2.jpg" alt="Beauty" />
+              <img src="img/fotobg.jpeg" alt="Beauty" />
               <div class="slide-label">Beauty Shoot</div>
             </div>
           </div>
@@ -1489,14 +1526,32 @@
         </div>
         <div class="form-row">
           <div class="form-group">
-            <label>Jenis Layanan</label>
+            <label>Username Instagram</label>
+            <input type="text" id="inputIg" placeholder="@username" />
+          </div>
+
+          <div class="form-group">
+            <label>Jam Acara</label>
+            <input type="time" id="inputJam" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Sekolah / Instansi</label>
+          <input
+            type="text"
+            id="inputSekolah"
+            placeholder="Nama sekolah / instansi"
+          />
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Jenis Layanan makeup</label>
             <select id="inputLayanan">
               <option value="" disabled selected>Pilih layanan</option>
-              <option>Makeup Pengantin</option>
-              <option>Makeup Wisuda</option>
-              <option>Makeup Pesta</option>
-              <option>Makeup Editorial</option>
-              <option>Prewedding</option>
+              <option>Graduation makeup</option>
+              <option>Engagement makeup</option>
+              <option>Yearbook makeup</option>
             </select>
           </div>
           <div class="form-group">
@@ -1507,6 +1562,15 @@
         <div class="form-group">
           <label>Lokasi Acara</label>
           <input type="text" id="inputLokasi" placeholder="Kota / Venue" />
+        </div>
+        <div class="form-group">
+          <label>lokasi makeup</label>
+          <select id="inputlokasimakeup">
+            <option value="" disabled selected>Pilih lokasi makeup</option>
+            <option>Home Service (harga menyesuaikan jarak)</option>
+            <option>Lokasi 1 Rajegwesi</option>
+            <option>Lokasi 2 Tegal</option>
+          </select>
         </div>
         <div class="form-group">
           <label>Catatan Tambahan</label>
@@ -1637,19 +1701,25 @@
         .forEach((a) => a.addEventListener("click", closeMenu));
 
       // ── WhatsApp Booking ──
-      const WA_NUMBER = "62882005843047"; // nomor tujuan
+      const WA_NUMBER = "6285877606967"; // nomor tujuan
 
       document.getElementById("btnSubmit").addEventListener("click", () => {
         const nama = document.getElementById("inputNama").value.trim();
         const wa = document.getElementById("inputWa").value.trim();
+
+        const ig = document.getElementById("inputIg").value.trim();
+        const jam = document.getElementById("inputJam").value;
+        const sekolah = document.getElementById("inputSekolah").value.trim();
+
         const layanan = document.getElementById("inputLayanan").value;
         const tanggal = document.getElementById("inputTanggal").value;
         const lokasi = document.getElementById("inputLokasi").value.trim();
+        const lokasimakeup = document.getElementById("inputlokasimakeup").value;
         const catatan = document.getElementById("inputCatatan").value.trim();
 
         // Validasi
-        if (!nama || !wa || !layanan || !tanggal || !lokasi) {
-          showToast("Mohon lengkapi semua field yang wajib diisi.", true);
+        if (!nama || !wa || !layanan || !tanggal || !lokasi || !lokasimakeup) {
+          showToast("Mohon lengkapi semua field yang wajib diisi!", true);
           return;
         }
 
@@ -1664,19 +1734,24 @@
 
         // Susun pesan WhatsApp
         const pesan =
-          `Halo Kak Desi! Saya ingin melakukan booking makeup 💄\n\n` +
-          `👤 *Nama*: ${nama}\n` +
-          `📱 *No. WhatsApp*: ${wa}\n` +
-          `💅 *Layanan*: ${layanan}\n` +
-          `📅 *Tanggal Acara*: ${tglStr}\n` +
-          `📍 *Lokasi*: ${lokasi}\n` +
-          (catatan ? `📝 *Catatan*: ${catatan}\n` : ``) +
-          `\nMohon konfirmasinya ya Kak, terima kasih! 🙏`;
+          `Format booking makeup\n` +
+          `@makeupbydesiiiii\n\n` +
+          `Nama : ${nama}\n` +
+          `Tanggal/jam acara : ${tglStr} / ${jam}\n` +
+          `Username ig : ${ig}\n` +
+          `Makeup : ${layanan}\n` +
+          `Lokasi makeup : ${lokasimakeup}\n` +
+          `Alamat : ${lokasi}\n` +
+          `Sekolah/instasi : ${sekolah}\n` +
+          `Catatan : ${catatan}\n\n` +
+          `Isi format diatas ya kak. Untuk fix booking bisa dp min 50rb/orang ke BCA 1330425951 / Desi Pangestu. List = Fix no Cancel⚠️ Cancel = DP hangus.\n\n` +
+          `Thank you💗`;
+
+        showToast("✓ Mengalihkan ke WhatsApp........");
 
         const url = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(pesan)}`;
-        window.open(url, "_blank");
 
-        showToast("✓ Mengalihkan ke WhatsApp...");
+        window.open(url, "_blank");
       });
     </script>
   </body>
